@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Website</title>
+    <style>
+        /* Fullscreen iframe */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://takipcimx.net/" id="myFrame"></iframe>
+
+    <script>
+        // Prevent right-click
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts for copying
+        document.addEventListener("keydown", function(e) {
+            if ((e.ctrlKey && (e.key === "c"  e.key === "C"))  
+                (e.ctrlKey && e.key === "U") || 
+                e.key === "F12") {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
